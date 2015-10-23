@@ -30,13 +30,14 @@
       </header>
     <div class="ui one column page grid" style="margin-top:1em;">
       <div class="ui segment column">
-        <form action="" class="ui form" id="newProduct">
+        <!-- Formulario Venta -->
+        <form action="" class="ui form" id="newVenta">
           <h4 class="ui dividing header">Informacion de la venta</h4>
           <div class="fields">
             <div class="field">
               <label for="">Cliente</label>
               <div class="field ui action fluid input">
-                <select class="ui search dropdown" id="cliente">
+                <select class="ui search dropdown" id="cliente" required>
                   <option value="">Cliente</option>
                   <option value="AL">Alabama</option>
                 </select>
@@ -44,15 +45,37 @@
               </div>
             </div>
             <div class="field">
-              <label for="">Medicamento</label>
-              <select class="ui search dropdown" id="medicamento">
-                <option value="">Medicamento</option>
+              <label for="">Total</label>
+              <input placeholder="Total" readonly="" type="text" id="total">
+            </div>
+            <div class="field">
+              <label for="">&nbsp</label>
+              <button type="submit" class="ui purple fluid button" name="button">Vender</button>
+            </div>
+          </div>
+        </form>
+        <h4 class="ui horizontal divider header">
+          <i class="tag icon"></i>
+          Descripcion de Productos
+        </h4>
+        <!-- Formulario Productos -->
+        <form action="" class="ui form" id="newProduct">
+          <div class="three fields">
+            <div class="field">
+              <label for="">Producto</label>
+              <select class="ui search dropdown" id="producto" required>
+                <option value="">Producto</option>
                 <option value="AL">Alabama</option>
+                <option value="AsadL">Alabamaasdasd</option>
               </select>
             </div>
             <div class="field">
               <label for="">Cantidad</label>
-              <input type="number" id="cantidad" step="1" value="0">
+              <input type="number" id="cantidad" step="1" value="1", min="1">
+            </div>
+            <div class="field">
+              <label for="">Valor Unitario</label>
+              <input type="number" id="valorUnitario" step="1" value="1", min="1">
             </div>
             <div class="field">
               <label for="">&nbsp</label>
@@ -60,7 +83,22 @@
             </div>
           </div>
         </form>
+
+        <!-- Tabla de Descripcion -->
         <h4 class="ui dividing header">Productos</h4>
+        <table class="ui very basic table">
+          <thead>
+            <tr class='ui center aligned'>
+              <th>Producto</th>
+              <th >Cantidad</th>
+              <th>Valor Unitario</th>
+              <th>Valor Total</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="itemsProducts" class='ui center aligned'>
+          </tbody>
+        </table>
       </div>
     </div>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
