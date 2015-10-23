@@ -15,13 +15,13 @@
           <div class="center aligned column">
             <div class="ui secondary pointing menu">
               <a class=" item" href="/speech/">
-                <i class="twitch icon"></i> Speechs
+                <i class="twitch icon"></i> Vender
               </a>
               <a class=" item" href="/projects/">
-                <i class="rocket icon"></i> Projects
+                <i class="rocket icon"></i>
               </a>
               <a class=" item" href="/acerca/">
-                <i class="user icon"></i> Bio
+                <i class="user icon"></i> 
               </a>
             </div>
           </div>
