@@ -4,13 +4,12 @@
 $host='localhost';
 
 //Usuario
-$user='root';
+$user='user';
 
 //Password
-$password='sindy';
+$password='pass';
 
 //Base de datos a utilizar
 $db='venta_medicamento';
-
 
 ?>
